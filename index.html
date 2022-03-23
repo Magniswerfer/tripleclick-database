@@ -1,0 +1,36 @@
+---
+layout: default
+title: TripleclickDB
+---
+<h1>Hello, fellow Tripleclickers</h1>
+<p>This is just a little site I built for myself and to any of you, that'll help us search up any games (and potentially other media) discussed by Maddy, Jason and Kirk. I am definitely not promising that it's comprehensive, but I hope that it's helpful!    </p>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a name">
+
+
+    <table id="myTable">
+        <tr class="header">
+          <th>Game</th>
+          <th>Most Recent Mention</th>
+        </tr>
+        {% for game in site.games %}
+            <tr>
+                <td><a href="{{ game.url }}">{{ game.title }}</a></td>
+                <td>
+                    {% assign id = game.id | remove: "/games/"%}
+                    {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
+                    {% assign epDate = i[0].ep%}
+                    {% assign ep = site.episodes | where: "date", epDate %}
+                    {% for episode in site.episodes %}
+                        {% assign id =  episode.id | remove: "/episodes/" %}
+                        {% if id == epDate %}
+                        <a href="{{ episode.url }}">{{ episode.title }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+      </table>
+
+
+

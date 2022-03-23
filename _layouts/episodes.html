@@ -1,0 +1,30 @@
+<!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+
+        <script src="/assets/script.js"></script>
+    </head>
+        <body>
+        <h1>{{page.title}}</h1>
+        {{ content }}
+
+        <h2>Games mentioned:</h2>
+        <ul>
+            {% assign id = page.id | remove: "/episodes/" %}
+            {% assign mentions = site.data.game_mentions | where: "ep", id %}
+
+            {% for mention in mentions %}
+            <li>
+                {% for game in site.games %}
+                    {% assign id = game.id | remove: "/games/" %}
+                    {% if id == mention.game %}
+                    <a href="{{ game.url }}">{{ game.title }}</a>
+                    {% endif %}
+                {% endfor %}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

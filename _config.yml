@@ -1,0 +1,19 @@
+collections:
+  games:
+    output: true
+  episodes:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "games" # a collection in your site, in plural form
+    values:
+      layout: "games"
+  -
+    scope:
+      path: ""
+      type: "episodes" # a collection in your site, in plural form
+    values:
+      layout: "episodes"
