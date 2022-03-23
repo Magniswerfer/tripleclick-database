@@ -1,3 +1,7 @@
+url: https://magnushoholt.com
+baseurl: /tripleclickdb
+permalink: date
+
 collections:
   games:
     output: true

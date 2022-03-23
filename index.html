@@ -15,7 +15,7 @@ title: TripleClickDB
         </tr>
         {% for game in site.games %}
             <tr>
-                <td><a href="{{ game.url }}">{{ game.title }}</a></td>
+                <td><a href="{{ game.url | relative_url}}">{{ game.title }}</a></td>
                 <td>
                     {% assign id = game.id | remove: "/games/"%}
                     {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
@@ -24,7 +24,7 @@ title: TripleClickDB
                     {% for episode in site.episodes %}
                         {% assign id =  episode.id | remove: "/episodes/" %}
                         {% if id == epDate %}
-                        <a href="{{ episode.url }}">{{ episode.title }}</a>
+                        <a href="{{ episode.url | relative_url}}">{{ episode.title }}</a>
                         {% endif %}
                     {% endfor %}
                 </td>

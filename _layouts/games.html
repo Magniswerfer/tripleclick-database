@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>{{ page.title }}</title>
 
-        <script src="/assets/script.js"></script>
+        <script src="/tripleclickdb/assets/script.js"></script>
     </head>
         <body>
         <h1>{{page.title}}</h1>
@@ -20,7 +20,7 @@
                 {% for episode in site.episodes %}
                     {% assign id = episode.id | remove: "/episodes/" %}
                     {% if id == mention.ep %}
-                    <a href="{{ episode.url }}">{{ episode.title }}</a>
+                    <a href="{{ episode.url | relative_url}}">{{ episode.title }}</a>
                     {% endif %}
                 {% endfor %}
             </li>
