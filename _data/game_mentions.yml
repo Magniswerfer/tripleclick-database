@@ -1,11 +1,70 @@
+# - ep: 
+#  game:
+#  section:
+
+- ep: "20200423"
+  game: animalCrossingNewHorizons
+  section: main
+
+- ep: "20200423"
+  game: finalFantasyVIIRemake
+  section: oneMore
+
+- ep: "20200423"
+  game: kentuckyRouteZero
+  section: oneMore
+
+- ep: "20200423"
+  game: halfLifeAlyx
+  section: oneMore
+
+- ep: "20200423"
+  game: residenEvil3Remake
+  section: oneMore
+
+- ep: "20200430"
+  game: jackBoxSeries
+  section: main
+
+- ep: "20200430"
+  game: ringFitAdventure
+  section: main
+
+- ep: "20200430"
+  game: pokemonGo
+  section: main
+
+- ep: "20200430"
+  game: animalCrossingNewHorizons
+  section: main
+
+- ep: "20200430"
+  game: finalFantasyVIIiOS
+  section: main
+
+- ep: "20200430"
+  game: finalFantasyVIIRemake
+  section: main
+
+- ep: "20200430"
+  game: theLastOfUsPartII
+  section: oneMore
+
 - ep: "20220303"
   game: eldenRing
+  section: main
 
 - ep: "20220303"
   game: dyingLight2
+  section: main
   
 - ep: "20220310"
   game: eldenRing
+  section: main
 
 - ep: "20210204"
   game: darkSouls
+  section: main
+
+
+# Section differentiates between the "main" section of the podcast and "oneMore" - the "one more thing" section.
