@@ -1,7 +1,12 @@
 # - ep: 
 #  game:
-#  section:
+#  section: # Section differentiates between the "main" section of the podcast and "oneMore" - the "one more thing" section.
 
+#############################
+#           2020            #
+#############################
+
+# ep 1
 - ep: "20200423"
   game: animalCrossingNewHorizons
   section: main
@@ -22,6 +27,7 @@
   game: residenEvil3Remake
   section: oneMore
 
+#ep 2
 - ep: "20200430"
   game: jackBoxSeries
   section: main
@@ -50,6 +56,74 @@
   game: theLastOfUsPartII
   section: oneMore
 
+#ep3
+- ep: "20200507"
+  game: ringFitAdventure
+  section: main
+
+- ep: "20200507"
+  game: fallout76
+  section: main
+
+- ep: "20200507"
+  game: fallout3
+  section: main
+
+- ep: "20200507"
+  game: falloutNewVegas
+  section: main
+
+- ep: "20200507"
+  game: falloutShelter
+  section: main
+
+- ep: "20200507"
+  game: fallout4
+  section: main
+
+- ep: "20200507"
+  game: discoElysium
+  section: main
+
+- ep: "20200507"
+  game: theSims4
+  section: oneMore
+
+#ep 4
+- ep: "20200514"
+  game: superMetroid
+  section: main
+
+- ep: "20200514"
+  game: outerWilds
+  section: main
+
+- ep: "20200514"
+  game: persona5Royal
+  section: main
+
+- ep: "20200514"
+  game: finalFantasyVIIRemake
+  section: oneMore
+
+- ep: "20200514"
+  game: animalCrossingNewHorizons
+  section: oneMore
+
+#############################
+#           2021            #
+#############################
+
+# ep x
+- ep: "20210204"
+  game: darkSouls
+  section: main
+
+#############################
+#           2022            #
+#############################
+
+# ep x
 - ep: "20220303"
   game: eldenRing
   section: main
@@ -58,13 +132,37 @@
   game: dyingLight2
   section: main
   
+# ep xx
 - ep: "20220310"
   game: eldenRing
   section: main
 
-- ep: "20210204"
-  game: darkSouls
+# ep 97
+- ep: "20220324"
+  game: destiny2
   section: main
 
+- ep: "20220324"
+  game: animalCrossingNewHorizons
+  section: main
 
-# Section differentiates between the "main" section of the podcast and "oneMore" - the "one more thing" section.
+- ep: "20220324"
+  game: stardewValley
+  section: main
+
+- ep: "20220324"
+  game: sidMeiersAlphaCentauri
+  section: main
+
+- ep: "20220324"
+  game: theWitcher3
+  section: main
+
+- ep: "20220324"
+  game: strangerOfParadise
+  section: oneMore
+
+- ep: "20220324"
+  game: eldenRing
+  section: oneMore
+

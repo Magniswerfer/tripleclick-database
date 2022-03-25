@@ -12,29 +12,45 @@ title: TripleClickDB
 <h2>Game List</h2>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a name">
 
-    <table id="myTable">
+    <table class="sortable paginated" id="myTable">
+        <thead>
         <tr class="header">
           <th>Game</th>
-          <th>Most Recent Mention</th>
+          <th>Most Recently Mentioned in:</th>
+          <th id="gameTableDate">Most Recently Mentioned on:</th>
         </tr>
-        {% for game in site.games %}
-            <tr>
-                <td><a href="{{ game.url | relative_url}}">{{ game.title }}</a></td>
-                <td>
-                    {% assign id = game.id | remove: "/games/"%}
-                    {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
-                    {% assign epDate = i[0].ep%}
-                    {% assign ep = site.episodes | where: "date", epDate %}
-                    {% for episode in site.episodes %}
-                        {% assign id =  episode.id | remove: "/episodes/" %}
-                        {% if id == epDate %}
-                        <a href="{{ episode.url | relative_url}}">{{ episode.title }}</a>
-                        {% endif %}
-                    {% endfor %}
-                </td>
-            </tr>
-        {% endfor %}
+        </thead>
+        <tbody>
+            {% for game in site.games %}
+                <tr>
+                    <td>
+                        <a href="{{ game.url | relative_url}}">{{ game.title }}</a>
+                    </td>
+                    <td>
+                        {% assign id = game.id | remove: "/games/"%}
+                        {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
+                        {% assign epDate = i[0].ep%}
+                        {% assign ep = site.episodes | where: "date", epDate %}
+                        {% for episode in site.episodes %}
+                            {% assign id =  episode.id | remove: "/episodes/" %}
+                            {% if id == epDate %}
+                            <a href="{{ episode.url | relative_url}}">{{ episode.title }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% assign id = game.id | remove: "/games/"%}
+                        {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
+                        {% assign epDate = i[0].ep%}
+                        {% assign ep = site.episodes | where: "date", epDate %}
+                        {% for episode in site.episodes %}
+                            {% assign id =  episode.id | remove: "/episodes/" %}
+                            {% if id == epDate %}
+                            <a href="{{ episode.url | relative_url}}">{{ episode.id | date: "%D" }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
       </table>
-
-
-

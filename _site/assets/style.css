@@ -1,0 +1,9 @@
+/* pagination is broken. see script.js for more info.
+#mytable tr {
+    display: none;
+  }
+*/
+
+thead tr:hover{
+    cursor: pointer;
+}

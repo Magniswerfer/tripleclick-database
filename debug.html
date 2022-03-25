@@ -1,0 +1,25 @@
+---
+layout: default
+title: DEBUG
+---
+<h1>THIS PAGE IS ONLY FOR DEBUGGING.</h1>
+
+<!-- THE BELOW STUFF IS JUST FOR DEBUGGING-->
+<script> 
+    var gamesMentioned; 
+    var gamesList = []; 
+</script>
+
+{% for game in site.games %}
+    <script>
+        gamesList.push("{{game.id | remove: "/games/"}}");
+    </script>
+{% endfor%}
+
+{%for mention in site.data.game_mentions%}
+    <script>
+        if (!gamesList.includes("{{mention.game}}")){
+            console.log("Mention doesn't exists: {{mention.game}}");
+        }
+    </script>
+{% endfor %}
