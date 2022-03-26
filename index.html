@@ -17,8 +17,9 @@ title: TripleClickDB
         <thead>
         <tr class="header">
           <th>Game</th>
-          <th>Most Recently Mentioned in:</th>
-          <th id="gameTableDate">Most Recently Mentioned on:</th>
+          <th>Most Recently Mentioned in</th>
+          <th id="gameTableDate">Most Recently Mentioned on</th>
+          <th>Total mentions</th>
         </tr>
         </thead>
         <tbody>
@@ -27,7 +28,6 @@ title: TripleClickDB
                     <td>
                         <a href="{{ game.url | relative_url}}">{{ game.title }}</a>
                     </td>
-                    <td>
                         {% assign id = game.id | remove: "/games/"%}
                         {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
                         {% assign epDate = i[0].ep%}
@@ -35,22 +35,11 @@ title: TripleClickDB
                         {% for episode in site.episodes %}
                             {% assign id =  episode.id | remove: "/episodes/" %}
                             {% if id == epDate %}
-                            <a href="{{ episode.url | relative_url}}">{{ episode.title }}</a>
+                            <td><a href="{{ episode.url | relative_url}}">{{ episode.title }}</a></td>
+                            <td><a href="{{ episode.url | relative_url}}">{{ episode.id | date: "%D" }}</a></td>
                             {% endif %}
                         {% endfor %}
-                    </td>
-                    <td>
-                        {% assign id = game.id | remove: "/games/"%}
-                        {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
-                        {% assign epDate = i[0].ep%}
-                        {% assign ep = site.episodes | where: "date", epDate %}
-                        {% for episode in site.episodes %}
-                            {% assign id =  episode.id | remove: "/episodes/" %}
-                            {% if id == epDate %}
-                            <a href="{{ episode.url | relative_url}}">{{ episode.id | date: "%D" }}</a>
-                            {% endif %}
-                        {% endfor %}
-                    </td>
+                    <td>{{i.size}}</td>
                 </tr>
             {% endfor %}
         </tbody>
