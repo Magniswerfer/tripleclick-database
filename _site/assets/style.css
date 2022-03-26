@@ -4,6 +4,118 @@
   }
 */
 
-thead tr:hover{
+:root {
+  --main-bg-color: #4ca3ae;
+  --primary-color: #28326b;
+  --secondary-color: #fbefb0;
+  --highlight-color: #d23938;
+
+  --main-bg-color75: #4ca2ae75;
+  --primary-color75: #28326b75;
+  --secondary-color75: #fbefb075;
+  --highlight-color75: #d2393875;
+}
+
+li {
+  list-style: none;
+  height: 2em;
+}
+
+li::before {
+  content: '\25c8';
+  padding-right: 1em;
+  color: var(--primary-color);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+}
+
+thead tr th:hover{
     cursor: pointer;
+    color: var(--highlight-color);
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+h1, h2, h3, h4, th {
+  color: var(--primary-color);
+}
+
+p, td {
+  color: var(--secondary-color);
+}
+
+a{
+  color: var(--secondary-color);
+}
+
+a:hover{
+  color: var(--highlight-color);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+ }
+ 
+ th, td {
+  border-bottom: 1px solid var(--primary-color);
+  text-align: left;
+  height: 2em;
+ }
+
+ .gameTable tbody tr td:nth-child(3), .gameTable thead tr th:nth-child(3), .gameTable tbody tr td:nth-child(4), .gameTable thead tr th:nth-child(4){
+   text-align: center;
+}
+
+.gameTable{
+  width: 100%;
+}
+
+.gameSearchBar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+#myInput{
+  background-color: var(--primary-color75);
+  color: var(--main-bg-color);
+  width : 880px;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  font-size: large;
+}
+
+#myInput:focus {
+  caret-color: var(--highlight-color);
+  outline: 1px solid var(--highlight-color) !important;
+}
+
+#myInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--main-bg-color);
+  opacity: 1; /* Firefox */
+}
+
+#myInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--main-bg-color);
+}
+
+#myInput::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--main-bg-color);
 }
