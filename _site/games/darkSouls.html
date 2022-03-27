@@ -3,17 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title>Dark Souls</title>
-        <link rel=stylesheet href="/tripleclickdb/assets/style.css" type="text/css">
-        <script src="/tripleclickdb/assets/script.js"></script>
-        <script src="/tripleclickdb/assets/games.js"></script>
+        <link rel=stylesheet href="/assets/style.css" type="text/css">
+        <script src="/assets/script.js"></script>
     </head>
         <body>
-            <div class="home-navn"><a href="/tripleclickdb/">HOME</a></div>
-            <div class="content-wrapper">
+            <div class="home-navn "><a href="/">HOME</a></div>
+            <div class="content-wrapper hidden">
 
-                <h1>Dark Souls</h1>
-                <p>Dark Souls is a 2011 action role-playing game developed by FromSoftware and published by Namco Bandai Games.</p>
+                <h1 class="game-title">Dark Souls</h1>
+                <div class="sub-title"></div>
 
+                <div class = "summary-container">
+                <img class="cover-art" src="/assets/img/co2nfc.png" alt="Cover art for Dark Souls" width="200px">
+                <div class = "summary">
+                    <h2>Summary:</h2>
+                    <p id="summary-text"></p>
+                </div>
+
+                </div>
+                
+                
+                <h2>Reception:</h2>
+                <p><span id="num-crits"></span> critics have scored this game an average of <span id="crit-score"></span>/100</p>
 
                 
                 
@@ -171,7 +182,7 @@
                                 
                                     
                                     
-                                    <a href="/tripleclickdb/episodes/20210204.html">What’s The Deal With: Souls Games?, on 02/04/21</a>
+                                    <a href="/episodes/20210204.html">What’s The Deal With: Souls Games?, on 02/04/21</a>
                                     
                                 
                                     
@@ -541,7 +552,7 @@
                         
                             
                             
-                            <a href="/tripleclickdb/episodes/20210204.html">What’s The Deal With: Souls Games?, on 02/04/21</a>
+                            <a href="/episodes/20210204.html">What’s The Deal With: Souls Games?, on 02/04/21</a>
                             
                         
                             
@@ -761,5 +772,8 @@
                     
                 </ul>
             </div>
+
+            <script>var igdbID = 2155</script>
+            <script src="/assets/games.js" defer></script>
     </body>
 </html>

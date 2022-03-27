@@ -24,7 +24,7 @@ li {
 li::before {
   content: '\25c8';
   padding-right: 1em;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 body{
@@ -53,8 +53,8 @@ h1, h2, h3, h4, th {
   color: var(--primary-color);
 }
 
-p, td {
-  color: var(--secondary-color);
+p, td, a {
+  color: white;
 }
 
 a{
@@ -118,4 +118,33 @@ table {
 
 #myInput::-ms-input-placeholder { /* Microsoft Edge */
   color: var(--main-bg-color);
+}
+
+.summary-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.summary{
+  margin-left: 2em;
+}
+
+.summary h2{
+  margin-top: 0;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.game-title{
+  margin-bottom: 0;
+}
+
+.sub-title{
+  height: 16px;
+  margin-bottom: 15px;
+  font-size: small;
+  color: white;
 }

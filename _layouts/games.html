@@ -5,14 +5,26 @@
         <title>{{ page.title }}</title>
         <link rel=stylesheet href="/assets/style.css" type="text/css">
         <script src="/assets/script.js"></script>
-        <script src="/assets/games.js"></script>
     </head>
         <body>
-            <div class="home-navn"><a href="{{site.baseurl}}/">HOME</a></div>
-            <div class="content-wrapper">
+            <div class="home-navn "><a href="{{site.baseurl}}/">HOME</a></div>
+            <div class="content-wrapper hidden">
 
-                <h1>{{page.title}}</h1>
-                {{ content }}
+                <h1 class="game-title">{{page.title}}</h1>
+                <div class="sub-title"></div>
+
+                <div class = "summary-container">
+                <img class="cover-art" src="/assets/img/co2nfc.png" alt="Cover art for {{page.title}}" width="200px">
+                <div class = "summary">
+                    <h2>Summary:</h2>
+                    <p id="summary-text"></p>
+                </div>
+
+                </div>
+                
+                
+                <h2>Reception:</h2>
+                <p><span id="num-crits"></span> critics have scored this game an average of <span id="crit-score"></span>/100</p>
 
                 {% assign id = page.id | remove: "/games/" %}
                 {% assign mentions = site.data.game_mentions | where: "game", id %}
@@ -46,5 +58,8 @@
                     {% endfor %}
                 </ul>
             </div>
+
+            <script>var igdbID = {{page.igdbid}}</script>
+            <script src="/assets/games.js" defer></script>
     </body>
 </html>

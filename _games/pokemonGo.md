@@ -1,3 +1,4 @@
 ---
-title: "Pokemon Go"
+title: "Pokémon GO"
+igdbid: 12515
 ---

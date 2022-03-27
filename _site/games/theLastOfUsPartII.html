@@ -3,17 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title>The Last of Us Part II</title>
-        <link rel=stylesheet href="/tripleclickdb/assets/style.css" type="text/css">
-        <script src="/tripleclickdb/assets/script.js"></script>
-        <script src="/tripleclickdb/assets/games.js"></script>
+        <link rel=stylesheet href="/assets/style.css" type="text/css">
+        <script src="/assets/script.js"></script>
     </head>
         <body>
-            <div class="home-navn"><a href="/tripleclickdb/">HOME</a></div>
-            <div class="content-wrapper">
+            <div class="home-navn "><a href="/">HOME</a></div>
+            <div class="content-wrapper hidden">
 
-                <h1>The Last of Us Part II</h1>
+                <h1 class="game-title">The Last of Us Part II</h1>
+                <div class="sub-title"></div>
+
+                <div class = "summary-container">
+                <img class="cover-art" src="/assets/img/co2nfc.png" alt="Cover art for The Last of Us Part II" width="200px">
+                <div class = "summary">
+                    <h2>Summary:</h2>
+                    <p id="summary-text"></p>
+                </div>
+
+                </div>
                 
-
+                
+                <h2>Reception:</h2>
+                <p><span id="num-crits"></span> critics have scored this game an average of <span id="crit-score"></span>/100</p>
 
                 
                 
@@ -30,7 +41,7 @@
                                 
                                     
                                     
-                                    <a href="/tripleclickdb/episodes/20200430.html">The Best Quarantine Video Games, on 04/30/20</a>
+                                    <a href="/episodes/20200430.html">The Best Quarantine Video Games, on 04/30/20</a>
                                     
                                 
                                     
@@ -400,7 +411,7 @@
                         
                             
                             
-                            <a href="/tripleclickdb/episodes/20200430.html">The Best Quarantine Video Games, on 04/30/20</a>
+                            <a href="/episodes/20200430.html">The Best Quarantine Video Games, on 04/30/20</a>
                             
                         
                             
@@ -761,5 +772,8 @@
                     
                 </ul>
             </div>
+
+            <script>var igdbID = 26192</script>
+            <script src="/assets/games.js" defer></script>
     </body>
 </html>

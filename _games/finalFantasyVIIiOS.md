@@ -1,3 +1,4 @@
 ---
-title: "Final Fantasy VII (iOS)"
+title: "Final Fantasy VII"
+igdbid: 427
 ---

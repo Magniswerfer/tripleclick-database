@@ -1,4 +1,4 @@
 ---
 title: "Dying Light 2: Stay Human"
-releaseYear: 2022
+igdbid: 102584
 ---
