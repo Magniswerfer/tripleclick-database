@@ -33,12 +33,12 @@
                 <ul>
                     <li>
                         {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
-                        {% assign epDate = i[0].ep%}
-                        {% assign ep = site.episodes | where: "date", epDate %}
+                        {% assign epID = i[0].ep%}
+                        {% assign ep = site.episodes | where: "id", epID %}
                                 {% for episode in site.episodes %}
                                     {% assign id =  episode.id | remove: "/episodes/" %}
-                                    {% if id == epDate %}
-                                    <a href="{{ episode.url | relative_url}}">{{ episode.title }}, on {{ episode.id | date: "%D" }}</a>
+                                    {% if id == epID %}
+                                    <a href="{{ episode.url | relative_url}}">{{ episode.title }}, on {{ episode.release_date | date: "%D" }}</a>
                                     {% endif %}
                                 {% endfor %}
                     </li>

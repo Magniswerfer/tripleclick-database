@@ -1,0 +1,6 @@
+---
+title: "Beanscast: Yellowjackets Season One"
+type: bonus
+release_date: 20220213
+---
+Look, just, sometimes you crash-land in the wilderness with all of your high school frenemies and, in a moment of profound self-interest, kill and eat some of them. It happens. Jason, Maddy and Kirk are here to sort through the wreckage and figure out just what the heck happened on season one of Showtime’s breakout series Yellowjackets. They marvel at the many things this show did well, try to answer some of its lingering questions, and share their theories on what mysteries have yet to be revealed. Buzz buzz buzz.

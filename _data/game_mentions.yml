@@ -7,115 +7,119 @@
 #############################
 
 # ep 1
-- ep: "20200423"
+- ep: "1_whatYouKnow"
   game: animalCrossingNewHorizons
   section: main
 
-- ep: "20200423"
+- ep: "1_whatYouKnow"
   game: finalFantasyVIIRemake
   section: oneMore
 
-- ep: "20200423"
+- ep: "1_whatYouKnow"
   game: kentuckyRouteZero
   section: oneMore
 
-- ep: "20200423"
+- ep: "1_whatYouKnow"
   game: halfLifeAlyx
   section: oneMore
 
-- ep: "20200423"
+- ep: "1_whatYouKnow"
   game: residenEvil3Remake
   section: oneMore
 
 #ep 2
-- ep: "20200430"
+- ep: "2_quarantine"
   game: jackBoxSeries
   section: main
 
-- ep: "20200430"
+- ep: "2_quarantine"
   game: ringFitAdventure
   section: main
 
-- ep: "20200430"
+- ep: "2_quarantine"
   game: pokemonGo
   section: main
 
-- ep: "20200430"
+- ep: "2_quarantine"
   game: animalCrossingNewHorizons
   section: main
 
-- ep: "20200430"
+- ep: "2_quarantine"
   game: finalFantasyVIIiOS
   section: main
 
-- ep: "20200430"
+- ep: "2_quarantine"
   game: finalFantasyVIIRemake
   section: main
 
-- ep: "20200430"
+- ep: "2_quarantine"
   game: theLastOfUsPartII
   section: oneMore
 
 #ep3
-- ep: "20200507"
+- ep: "3_fallout"
   game: ringFitAdventure
   section: main
 
-- ep: "20200507"
+- ep: "3_fallout"
   game: fallout76
   section: main
 
-- ep: "20200507"
+- ep: "3_fallout"
   game: fallout3
   section: main
 
-- ep: "20200507"
+- ep: "3_fallout"
   game: falloutNewVegas
   section: main
 
-- ep: "20200507"
+- ep: "3_fallout"
   game: falloutShelter
   section: main
 
-- ep: "20200507"
+- ep: "3_fallout"
   game: fallout4
   section: main
 
-- ep: "20200507"
+- ep: "3_fallout"
   game: discoElysium
   section: main
 
-- ep: "20200507"
+- ep: "3_fallout"
   game: theSims4
   section: oneMore
 
 #ep 4
-- ep: "20200514"
+- ep: "4_guide"
   game: superMetroid
   section: main
 
-- ep: "20200514"
+- ep: "4_guide"
   game: outerWilds
   section: main
 
-- ep: "20200514"
+- ep: "4_guide"
   game: persona5Royal
   section: main
 
-- ep: "20200514"
+- ep: "4_guide"
   game: finalFantasyVIIRemake
   section: oneMore
 
-- ep: "20200514"
+- ep: "4_guide"
   game: animalCrossingNewHorizons
   section: oneMore
+
+# ep 5
+
+- ep: "5_ff"
 
 #############################
 #           2021            #
 #############################
 
 # ep x
-- ep: "20210204"
+- ep: "40_soulsGames"
   game: darkSouls
   section: main
 
@@ -124,45 +128,45 @@
 #############################
 
 # ep x
-- ep: "20220303"
+- ep: "94_openWorld"
   game: eldenRing
   section: main
 
-- ep: "20220303"
+- ep: "94_openWorld"
   game: dyingLight2
   section: main
   
 # ep xx
-- ep: "20220310"
+- ep: "95_eldenRing"
   game: eldenRing
   section: main
 
 # ep 97
-- ep: "20220324"
+- ep: "97_stocks"
   game: destiny2
   section: main
 
-- ep: "20220324"
+- ep: "97_stocks"
   game: animalCrossingNewHorizons
   section: main
 
-- ep: "20220324"
+- ep: "97_stocks"
   game: stardewValley
   section: main
 
-- ep: "20220324"
+- ep: "97_stocks"
   game: sidMeiersAlphaCentauri
   section: main
 
-- ep: "20220324"
+- ep: "97_stocks"
   game: theWitcher3
   section: main
 
-- ep: "20220324"
+- ep: "97_stocks"
   game: strangerOfParadise
   section: oneMore
 
-- ep: "20220324"
+- ep: "97_stocks"
   game: eldenRing
   section: oneMore
 

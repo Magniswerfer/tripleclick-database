@@ -1,0 +1,6 @@
+---
+title: "What’s The Deal With: Grand Theft Auto V"
+type: episode
+release_date: 20220317
+---
+Grand Theft Auto V is one of the most lucrative games of all time. Why??? Kirk, Jason, and Maddy aren’t really sure, but at least they can tell you all about Rockstar’s hit action shooting game. The gang talks about 2013 nihilism, the innovations that GTA V brought to the open-world party, and how crime doesn’t pay… except when it does.

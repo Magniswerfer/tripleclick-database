@@ -16,6 +16,10 @@ title: DEBUG
     </script>
 {% endfor%}
 
+<script>
+    console.log("gamelist: " , gamesList);
+</script>
+
 {%for mention in site.data.game_mentions%}
     <script>
         if (!gamesList.includes("{{mention.game}}")){

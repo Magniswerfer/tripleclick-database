@@ -1,0 +1,6 @@
+---
+title: "Diablo Through The Ages"
+type: episode
+release_date: 20211007
+---
+Why is Diablo one of the best-selling series of all time? Just what makes Blizzard’s action-RPGs so devilishly appealing? Kirk, Maddy, and Jason break down the iconic franchise and talk about why it’s good — and why it might be pretty bad. They talk about the addictive properties of loot hunting, how the games have evolved over the years, and whether there’s really room in their lives for Diablo 4.

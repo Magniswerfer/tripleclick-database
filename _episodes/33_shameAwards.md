@@ -1,0 +1,6 @@
+---
+title: "The Video Game Shame Awards"
+type: episode
+release_date: 20201210
+---
+Maddy, Kirk, and Jason open up the mailbag to answer some of YOUR questions. Should there be a Game Award for the best studio culture? How do we honestly criticize games while knowing how many blood, sweat, and pixels they take to develop? And just how necessary is Twitter Discourse?
