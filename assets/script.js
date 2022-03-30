@@ -19,6 +19,7 @@ function myFunction() {
     }
   }
 
+
 // Trying and failing to make pagination work for the table:
 // Current issue is, that is messes with the sorting function (it only sorts on visible pages..)
 /*$(document).ready(function(){

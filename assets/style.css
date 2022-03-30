@@ -4,16 +4,37 @@
   }
 */
 
-:root {
-  --main-bg-color: #4ca3ae;
-  --primary-color: #28326b;
-  --secondary-color: #fbefb0;
-  --highlight-color: #d23938;
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@900&display=swap');
 
-  --main-bg-color75: #4ca2ae75;
-  --primary-color75: #28326b75;
+:root {
+  --main-bg-color: #18a5b0;
+  --primary-color: #232e66;
+  --secondary-color: #fbefb0;
+  --highlight-color: #d13939;
+
+  --main-bg-color75: #18a5b075;
+  --primary-color75: #232e6675;
   --secondary-color75: #fbefb075;
-  --highlight-color75: #d2393875;
+  --highlight-color75: #d1393975;
+
+  --main-bg-color50: #18a5b050;
+  --primary-color50: #232e6650;
+  --secondary-color50: #fbefb050;
+  --highlight-color50: #d1393950;
+
+  --main-bg-color25: #18a5b025;
+  --primary-color25: #232e6625;
+  --secondary-color25: #fbefb025;
+  --highlight-color25: #d1393925;
+}
+
+nav{
+  padding: 5px;
+  background-color: var(--primary-color25);
+}
+
+nav a{
+  padding-right: 10px;
 }
 
 li {
@@ -31,13 +52,20 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--main-bg-color);
   width: 100%;
+  margin: 0;
+}
+
+img.hero-logo{
+  width: 500px;
 }
 
 .content-wrapper{
   display: flex;
   flex-direction: column;
   width: 900px;
+  padding: 0px 10px 10px 10px;
 }
 
 thead tr th:hover{
@@ -45,12 +73,14 @@ thead tr th:hover{
     color: var(--highlight-color);
 }
 
-body {
-  background-color: var(--main-bg-color);
-}
-
 h1, h2, h3, h4, th {
   color: var(--primary-color);
+}
+
+.logo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p, td, a {
@@ -68,16 +98,33 @@ a:hover{
 table {
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
  }
  
  th, td {
-  border-bottom: 1px solid var(--primary-color);
   text-align: left;
   height: 2em;
+  padding: 5px 0 5px 0;
  }
 
  .gameTable tbody tr td:nth-child(3), .gameTable thead tr th:nth-child(3), .gameTable tbody tr td:nth-child(4), .gameTable thead tr th:nth-child(4){
    text-align: center;
+}
+
+.gameTable tbody tr td:nth-child(1), .gameTable thead tr th:nth-child(1){
+  padding-left: 5px;
+}
+
+table.gameTable tr td:nth-child(4){
+  width: 100px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--primary-color25);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--main-bg-color);
 }
 
 .gameTable{
@@ -147,4 +194,7 @@ table {
   margin-bottom: 15px;
   font-size: small;
   color: white;
+}
+
+.recentGamesWrapper{
 }

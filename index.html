@@ -1,16 +1,75 @@
 ---
 layout: default
-title: TripleClickDB
+title: Triple Click DB
 ---
-<div class = "introTextWrapper">
-<h1>Hello, fellow Tripleclickers</h1>
-<p>This is just a little site I built for myself and to any of you, that'll help us search up any games (and potentially other media) discussed by Maddy, Jason and Kirk. I am definitely not promising that it's comprehensive, but I hope that it's helpful!</p>
-<p>I maintain the page <a href="https://github.com/Magniswerfer/tripleclickdb">here</a>.</p>
+<div class = "logo-container"><img class="hero-logo" src ="assets/img/logo.png"></div>
 
-<h2>Scope</h2>
-<p>So, I quickly gave up on trying to list literally every game mentioned. That's not the purpose of this site. What I want is to be able to find the episodes in which our beloved hosts discuss a game to some meaningful (yet completely arbitrary) extend (that I have made up myself which is likely wildly inconsistent). However, I will try not include games that are just lightly glanced over.</p>
-<p>Next is, that I will only be differentiating between games being discussed as part of the main section and as part of One More Thing. Figuring out exactly when it's discussed is up you.</p>
-<p>Finally, please use the episode titles and notes to get an idea of the context of the game's discussion. Sometimes it will be briefly discussed as part of a more abstract discussion (such as the use of game guides), and some times it will be used for comparison in an episode largely about something else (e.g., Disco Elysium in the Fallout episode).</p>
+<h2>Recently Mentioned</h2>
+
+<div class="recentGamesWrapper">
+    
+{% assign allNewestMentions = "" | split: ', '%}
+{% for recentGame in site.games%}
+    
+    {% assign gamesArray = "" | split: ', ' %}
+
+    {% assign gameId = recentGame.id | remove: "/games/"%}
+    {% assign mentions = site.data.game_mentions | where:"game", gameId %}
+    {% for mention in mentions%}
+        {% assign epID = mention.ep %}
+        
+        {% for episode in site.episodes %}
+            {% assign id =  episode.id | remove: "/episodes/" %}
+            {% if id == epID %}
+
+            {% assign date = episode.release_date | append: ":" %}
+            {% assign date = date | append: gameId %}
+
+
+            {% assign gamesArray = gamesArray | push: date %}            
+
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    
+    {% assign sortedGames = gamesArray | sort | reverse | join: ", " %}
+    {% assign sortedGames = sortedGames | split: ", " %}
+    
+    {% assign newestMention = sortedGames[0] %}
+    
+    
+    {% assign allNewestMentions = allNewestMentions | push: newestMention%}
+
+{% endfor %}
+
+{% assign allNewestMentions = allNewestMentions | sort | reverse | join: ", " %}
+{% assign allNewestMentions = allNewestMentions | split: ", " %}
+
+{% assign newestGamesURL = "" | split: ", "%}
+{% assign newestGamesIGDB = "" | split: ", "%}
+{% assign newestGamesTitle = "" | split: ", "%}
+
+{%for game in allNewestMentions%}
+
+    {% assign gameId = game | split: ":" | slice: 1 %}
+
+    {% for game in site.games %}
+        
+        {% assign id = game.id | remove: "/games/" %}
+            {% if gameId contains  id%}
+                {% assign newestGamesIGDB = newestGamesIGDB | push: game.igdbid%}
+                {% assign newestGamesURL = newestGamesURL | push: game.url%}
+                {% assign newestGamesTitle = newestGamesTitle | push: game.title%}
+            {% endif %}
+    {% endfor %}
+
+{%endfor%}
+
+
+{% for i in (1..5) %}
+    <a title="{{newestGamesTitle[i]}}" href="{{newestGamesURL[i]}}"><img class="recent-game-mention" data-recent-mention-gameID="{{newestGamesIGDB[i]}}" src="/assets/img/co2nfc.png" alt="Cover art for {{newestGamesTitle[i]}}" width="19%"></a>
+{% endfor %}
 </div>
 
 <div class = "gameTableWrapper">
@@ -37,7 +96,6 @@ title: TripleClickDB
                             {% assign id = game.id | remove: "/games/"%}
                             {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
                             {% assign epID = i[0].ep%}
-                            {% assign ep = site.episodes | where: "id", epID %}
                             {% for episode in site.episodes %}
                                 {% assign id =  episode.id | remove: "/episodes/" %}
                                 {% if id == epID %}
@@ -51,3 +109,5 @@ title: TripleClickDB
             </tbody>
         </table>
 </div>
+
+<script src="/assets/recentGames.js"></script>
