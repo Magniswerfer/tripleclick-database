@@ -1,6 +1,6 @@
 ---
 title: "Triple Play: Deathloop"
 type: episode
-release_date: 20210930
+date: 20210930
 ---
 It’s time for a Triple Play! Jason, Maddy, and Kirk have all played a whole lot of Deathloop, the time-twisting new game from Arkane. They break down what they like and don’t like about the game, diving into its unique structure, disappointing ending, and truly delightful little details.

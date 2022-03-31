@@ -1,6 +1,6 @@
 ---
 title: "Why E3 Demos Are Fake (And Why It Matters)"
 type: episode
-release_date: 20210121
+date: 20210121
 ---
 Jason, Maddy, and Kirk open up the listener mailbag and answer some of YOUR questions about all sorts of things. What does it mean when an E3 demo is fake? What’s our video game comfort food? And why do video game sequels always make you lose all your powers?

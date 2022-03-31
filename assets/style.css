@@ -25,16 +25,17 @@
   --main-bg-color25: #18a5b025;
   --primary-color25: #232e6625;
   --secondary-color25: #fbefb025;
-  --highlight-color25: #d1393925;
+  --highlight-color25: #d1393925
 }
+
 
 nav{
-  padding: 5px;
-  background-color: var(--primary-color25);
+  align-self: flex-end;
+  padding-top: 10px;
 }
 
-nav a{
-  padding-right: 10px;
+a.nav-about-link{
+  color: var(--primary-color);
 }
 
 li {
@@ -55,16 +56,31 @@ body{
   background-color: var(--main-bg-color);
   width: 100%;
   margin: 0;
+  position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
 }
 
-img.hero-logo{
+.logo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-container img{
   width: 500px;
+  max-width: 100%;
+}
+
+.logo-container.subpage img{
+  width: 300px;
+  max-width: 100%;
 }
 
 .content-wrapper{
   display: flex;
   flex-direction: column;
-  width: 900px;
+  max-width: 900px;
   padding: 0px 10px 10px 10px;
 }
 
@@ -77,11 +93,21 @@ h1, h2, h3, h4, th {
   color: var(--primary-color);
 }
 
-.logo-container{
+.recentGamesWrapperInner{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.recent-game-mention-link{
+  width: 19%;
+}
+
+.recent-game-mention{
+  width: 100%;
+}
+
 
 p, td, a {
   color: white;
@@ -141,12 +167,13 @@ tbody tr:nth-child(even) {
 #myInput{
   background-color: var(--primary-color75);
   color: var(--main-bg-color);
-  width : 880px;
+  width : 100%;
   height: 50px;
   padding-left: 10px;
   padding-right: 10px;
   border: none;
   font-size: large;
+  box-sizing:border-box;
 }
 
 #myInput:focus {
@@ -180,7 +207,6 @@ tbody tr:nth-child(even) {
   margin-top: 0;
 }
 
-
 .hidden {
   display: none;
 }
@@ -196,5 +222,36 @@ tbody tr:nth-child(even) {
   color: white;
 }
 
-.recentGamesWrapper{
+.cover-art{
+  width: 20%;
+  height: 20%;
+}
+
+
+@media screen and (max-width: 600px) {
+  body{
+    width: 100%;
+  }
+
+  .logo-container.subpage{
+    margin-bottom: 5px;
+  }
+
+  .logo-container.subpage img{
+    width: 200px;
+  }
+  
+  .recentGamesWrapper{
+    overflow: scroll; 
+    width: 100%; 
+  }
+
+  .recentGamesWrapperInner{
+    width: 200%;
+  }
+
+  .gameTable tbody tr td:nth-child(1), .gameTable thead tr th:nth-child(1){
+    display: none;
+  }
+
 }

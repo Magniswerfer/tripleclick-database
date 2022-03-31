@@ -1,6 +1,6 @@
 ---
 title: "Will Ready Player One Ever Be Real?"
 type: episode
-release_date: 20220120
+date: 20220120
 ---
 Will the metaverse of Ready Player One ever exist in our world? Has a bad ending ever ruined a video game? And just how does one get into Monster Hunter? This week, Jason, Kirk, and Maddy open up the listener mailbag and answer some of YOUR questions on all sorts of things. (Note: We recorded this episode BEFORE Tuesday’s bombshell news that Microsoft is buying Activision!)

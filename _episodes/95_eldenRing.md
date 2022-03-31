@@ -1,6 +1,6 @@
 ---
 title: "Triple Play: Elden Ring"
 type: episode
-release_date: 20220310
+date: 20220310
 ---
 You may have heard: Elden Ring is out. And the Triple Click crew has been playing it — for a combined 200+ hours. Kirk, Jason, and Maddy put on their Burger King wizard hats and take a trip to The Lands Between, where they’re collecting Great Runes and trying not to fall off cliffs. They talk about the vast scope of the game, the brilliance of player notes, how to avoid burnout, the rewards of exploration, and oh so much more.

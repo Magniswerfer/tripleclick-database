@@ -1,6 +1,6 @@
 ---
 title: "Beanscast: The Last of Us Part II"
 type: bonus
-release_date: 20200726
+date: 20200726
 ---
 Kirk, Maddy and Jason have all finished The Last of Us Part II, so it’s time for them to spill the beans on Naughty Dog’s latest epic. What did they think of the story in all its twists and turns? What did they want more of, and what did they want less of? And what’s so special about post-apocalyptic Seattle, anyway?

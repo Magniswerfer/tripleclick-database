@@ -1,6 +1,6 @@
 ---
 title: What Makes Someone ‘Good’ At Games?
 type: episode
-release_date: 20210701
+date: 20210701
 ---
 Jason, Maddy, and Kirk open up the mailbag and take YOUR listener questions on all sorts of things. What makes people good at video games? Why do AAA games seem so bad at “editing”? What’s the best book-game pairing? And much more!

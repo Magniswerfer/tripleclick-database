@@ -1,6 +1,6 @@
 ---
 title: "The Best Quarantine Video Games"
 type: episode
-release_date: 20200430
+date: 20200430
 ---
 What games should you play in quarantine? What are the best games to help you stay connected to your friends? This week, Kirk, Maddy, and Jason talk through some of their recommendations for video games to play in self-isolation, from meaty RPGs to idyllic animal village simulators. They also highlight their favorite Jackbox Party Pack games.

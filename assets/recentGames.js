@@ -1,4 +1,5 @@
 const coverArt = document.querySelectorAll(".recent-game-mention");
+const recentGames = document.querySelector(".recentGamesWrapper");
 
 console.log(coverArt)
 
@@ -12,6 +13,7 @@ coverArt.forEach(
             loadImg(coverUrl).then(
                 (data) => {
                      node.src = data
+                     recentGames.classList.remove("hidden")
                     })
         }
     );

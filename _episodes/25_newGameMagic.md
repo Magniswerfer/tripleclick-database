@@ -1,6 +1,6 @@
 ---
 title: "How To Keep That “New Game Magic” Alive"
 type: episode
-release_date: 20201015
+date: 20201015
 ---
 Jason, Kirk, and Maddy open up the mailbag and answer some of YOUR great questions. How do we Maximize our Fun when playing video games? Is it possible to be a successful journalist while staying totally anonymous? And does Xbox Game Pass cause more anxiety than it cures?

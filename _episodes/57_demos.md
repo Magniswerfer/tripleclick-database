@@ -1,6 +1,6 @@
 ---
 title: "What’s The Deal With: Video Game Demos?"
 type: episode
-release_date: 20210603
+date: 20210603
 ---
 Why do some games get demos while others don’t? How did video game demos get started? And what’s up with that weird game PT? This week, Maddy, Jason, and Kirk answer the question that’s been on everyone’s minds: What’s the DEAL with video game demos?

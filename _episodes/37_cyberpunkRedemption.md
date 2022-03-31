@@ -1,6 +1,6 @@
 ---
 title: "Cyberpunk 2077 And Other Video Game Redemption Stories"
 type: episode
-release_date: 20210114
+date: 20210114
 ---
 In the wake of Cyberpunk 2077, a game with a rocky launch that will now try to find redemption, Jason, Maddy, and Kirk take a look at some other video game redemption stories. They talk about No Man’s Sky, Destiny, Final Fantasy XIV, and other games that got better over time. What does a successful turnaround look like? And what are the ethical questions involved? All that and lots more.

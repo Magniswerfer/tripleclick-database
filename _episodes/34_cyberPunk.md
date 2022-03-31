@@ -1,6 +1,6 @@
 ---
 title: "Triple Play: Cyberpunk 2077"
 type: episode
-release_date: 20201217
+date: 20201217
 ---
 Is Cyberpunk 2077 the biggest game of the year? Or just the most broken? This week, the gang dives into CD Projekt Red’s hotly anticipated new RPG: the good, the bad, and the very, very ugly. Jason, Maddy, and Kirk talk about their impressions on the game and their thoughts on all the many, many, many controversies surrounding it.

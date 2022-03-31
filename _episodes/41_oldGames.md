@@ -1,6 +1,6 @@
 ---
 title: "Why Is It So Hard To Play Old Games?"
 type: episode
-release_date: 20210211
+date: 20210211
 ---
 Maddy, Jason, and Kirk take a trip down memory lane, crossing nostalgia with frustration as they try to figure out why so many old games are so hard to play (legally). What do you do with your old consoles? Why do Nintendo and Sony make it so difficult to buy their old games? What’s the deal with video game preservation??? Plus: Kirk got a PS5!

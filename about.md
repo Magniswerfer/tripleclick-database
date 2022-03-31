@@ -7,6 +7,8 @@ title: About
 
 This is just a little site I built for myself and to any of you, that'll help us search up any games (and potentially other media) discussed by Maddy, Jason and Kirk. I am definitely not promising that it's comprehensive, but I hope that it's helpful!
 
+**This site is 100% fan made, and is not affiliated with the Triple Click podcast**
+
 
 ## Scope
 So, I quickly gave up on trying to list literally every game mentioned. That's not the purpose of this site. What I want is to be able to find the episodes in which our beloved hosts discuss a game to some meaningful (yet completely arbitrary) extend (that I have made up myself which is likely wildly inconsistent). However, I will try not include games that are just lightly glanced over.

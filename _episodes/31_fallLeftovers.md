@@ -1,6 +1,6 @@
 ---
 title: "The Leftover Video Games Of Fall"
 type: episode
-release_date: 20201126
+date: 20201126
 ---
 Maddy, Kirk, and Jason celebrate Thanksgiving in the best way possible: Leftovers. This week, the gang talks about all of the fall video games they haven’t had a chance to analyze on previous episodes, including Demon’s Souls, NBA 2K21, Yakuza Like A Dragon, Spider-Man: Miles Morales, and much, much more.

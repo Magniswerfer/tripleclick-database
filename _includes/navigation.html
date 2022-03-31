@@ -1,8 +1,8 @@
 <nav>
-    <a href="/" {% if page.url == "/" %}style="color: #d13939;"{% endif %}>
-      Home
-    </a>
-    <a href="/about.html" {% if page.url == "/about.html" %}style="color: #d13939;"{% endif %}>
-      About
+    <a class="nav-about-link" {% if page.url != "/" %} 
+      href="/">Home
+    {%else%}
+      href="/about">About
+    {% endif %}
     </a>
   </nav>

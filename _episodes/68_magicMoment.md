@@ -1,6 +1,6 @@
 ---
 title: "That ‘Magic Moment’ in a New Game"
 type: episode
-release_date: 20210826
+date: 20210826
 ---
 The Triple Click Trio opens up the mailbag and answer your most burning questions. This time around we’ve got questions about in-game morality, ferreting out the truth when reporting, our favorite moments in a new game, silent Nintendo protagonists, and whether Kirk records a new version of that “bing” sound every time he makes it.

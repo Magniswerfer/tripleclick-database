@@ -1,6 +1,6 @@
 ---
 title: "Triple Play: Hades"
 type: episode
-release_date: 20201022
+date: 20201022
 ---
 Jason, Kirk, and Maddy dive into Hades, one of the best games of the year so far. They talk about their favorite strategies, honor the Greek gods, and try to pinpoint what makes the latest game from Supergiant Games so special.

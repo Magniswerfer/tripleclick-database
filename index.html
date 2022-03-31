@@ -2,78 +2,79 @@
 layout: default
 title: Triple Click DB
 ---
-<div class = "logo-container"><img class="hero-logo" src ="assets/img/logo.png"></div>
 
-<h2>Recently Mentioned</h2>
+<h1>Recently Mentioned</h1>
 
-<div class="recentGamesWrapper">
-    
-{% assign allNewestMentions = "" | split: ', '%}
-{% for recentGame in site.games%}
-    
-    {% assign gamesArray = "" | split: ', ' %}
-
-    {% assign gameId = recentGame.id | remove: "/games/"%}
-    {% assign mentions = site.data.game_mentions | where:"game", gameId %}
-    {% for mention in mentions%}
-        {% assign epID = mention.ep %}
+<div class="recentGamesWrapper hidden">
+    <div class="recentGamesWrapperInner">
         
-        {% for episode in site.episodes %}
-            {% assign id =  episode.id | remove: "/episodes/" %}
-            {% if id == epID %}
+    {% assign allNewestMentions = "" | split: ', '%}
+    {% for recentGame in site.games%}
+        
+        {% assign gamesArray = "" | split: ', ' %}
 
-            {% assign date = episode.release_date | append: ":" %}
-            {% assign date = date | append: gameId %}
+        {% assign gameId = recentGame.id | remove: "/games/"%}
+        {% assign mentions = site.data.game_mentions | where:"game", gameId %}
+        {% for mention in mentions%}
+            {% assign epID = mention.ep %}
+            
+            {% for episode in site.episodes %}
+                {% assign id =  episode.id | remove: "/episodes/" %}
+                {% if id == epID %}
+
+                {% assign epDate = episode.date | date: "%Y%m%d" | append: ":" %}
+                {% assign epDate = epDate | append: gameId %}
 
 
-            {% assign gamesArray = gamesArray | push: date %}            
+                {% assign gamesArray = gamesArray | push: epDate %}            
 
-            {% endif %}
+                {% endif %}
+            {% endfor %}
         {% endfor %}
-    {% endfor %}
 
-    
-    {% assign sortedGames = gamesArray | sort | reverse | join: ", " %}
-    {% assign sortedGames = sortedGames | split: ", " %}
-    
-    {% assign newestMention = sortedGames[0] %}
-    
-    
-    {% assign allNewestMentions = allNewestMentions | push: newestMention%}
-
-{% endfor %}
-
-{% assign allNewestMentions = allNewestMentions | sort | reverse | join: ", " %}
-{% assign allNewestMentions = allNewestMentions | split: ", " %}
-
-{% assign newestGamesURL = "" | split: ", "%}
-{% assign newestGamesIGDB = "" | split: ", "%}
-{% assign newestGamesTitle = "" | split: ", "%}
-
-{%for game in allNewestMentions%}
-
-    {% assign gameId = game | split: ":" | slice: 1 %}
-
-    {% for game in site.games %}
         
-        {% assign id = game.id | remove: "/games/" %}
-            {% if gameId contains  id%}
-                {% assign newestGamesIGDB = newestGamesIGDB | push: game.igdbid%}
-                {% assign newestGamesURL = newestGamesURL | push: game.url%}
-                {% assign newestGamesTitle = newestGamesTitle | push: game.title%}
-            {% endif %}
+        {% assign sortedGames = gamesArray | sort | reverse | join: ", " %}
+        {% assign sortedGames = sortedGames | split: ", " %}
+        
+        {% assign newestMention = sortedGames[0] %}
+        
+        
+        {% assign allNewestMentions = allNewestMentions | push: newestMention%}
+
     {% endfor %}
 
-{%endfor%}
+    {% assign allNewestMentions = allNewestMentions | sort | reverse | join: ", " %}
+    {% assign allNewestMentions = allNewestMentions | split: ", " %}
+
+    {% assign newestGamesURL = "" | split: ", "%}
+    {% assign newestGamesIGDB = "" | split: ", "%}
+    {% assign newestGamesTitle = "" | split: ", "%}
+
+    {%for game in allNewestMentions%}
+
+        {% assign gameId = game | split: ":" | slice: 1 %}
+
+        {% for game in site.games %}
+            
+            {% assign id = game.id | remove: "/games/" %}
+                {% if gameId contains  id%}
+                    {% assign newestGamesIGDB = newestGamesIGDB | push: game.igdbid%}
+                    {% assign newestGamesURL = newestGamesURL | push: game.url%}
+                    {% assign newestGamesTitle = newestGamesTitle | push: game.title%}
+                {% endif %}
+        {% endfor %}
+
+    {%endfor%}
 
 
-{% for i in (1..5) %}
-    <a title="{{newestGamesTitle[i]}}" href="{{newestGamesURL[i]}}"><img class="recent-game-mention" data-recent-mention-gameID="{{newestGamesIGDB[i]}}" src="/assets/img/co2nfc.png" alt="Cover art for {{newestGamesTitle[i]}}" width="19%"></a>
-{% endfor %}
+    {% for i in (0..4) %}
+        <a class="recent-game-mention-link" title="{{newestGamesTitle[i]}}" href="{{newestGamesURL[i]}}"><img class="recent-game-mention" data-recent-mention-gameID="{{newestGamesIGDB[i]}}" src="/assets/img/co2nfc.png" alt="Cover art for {{newestGamesTitle[i]}}"></a>
+    {% endfor %}
+    </div>
 </div>
 
 <div class = "gameTableWrapper">
-    <h2>Game List</h2>
+    <h1>Game List</h1>
     <div class="gameSearchBar">
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games..">
     </div>
@@ -100,7 +101,7 @@ title: Triple Click DB
                                 {% assign id =  episode.id | remove: "/episodes/" %}
                                 {% if id == epID %}
                                 <td><a href="{{ episode.url | relative_url}}">{{ episode.title }}</a></td>
-                                <td><a href="{{ episode.url | relative_url}}">{{ episode.release_date}}</a></td>
+                                <td><a href="{{ episode.url | relative_url}}">{{ episode.date | date: "%Y-%m-%d"}}</a></td>
                                 {% endif %}
                             {% endfor %}
                         <td>{{i.size}}</td>
