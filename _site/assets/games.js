@@ -14,12 +14,13 @@ coverUrl = coverFunc.concat(igdbID);
     async function loadGameFacts() {
         const response = await fetch(gameUrl).then(
             response => response.json()
-            )
-            thisResponse = response[0]
-            numCrits.innerText = thisResponse.aggregated_rating_count
-            critScore.innerText = Math.round(thisResponse.aggregated_rating)
-            gameSummary.innerText = thisResponse.summary
-            subTitle.innerText = new Date(thisResponse.first_release_date*1000).getFullYear()
+        )
+        
+        thisResponse = response[0]
+        numCrits.innerText = thisResponse.aggregated_rating_count
+        critScore.innerText = Math.round(thisResponse.aggregated_rating)
+        gameSummary.innerText = thisResponse.summary
+        subTitle.innerText = "(" + new Date(thisResponse.first_release_date*1000).getFullYear() + ")"
       }
 
       async function loadImg() {
@@ -27,8 +28,6 @@ coverUrl = coverFunc.concat(igdbID);
             response => response.json()
             )
             thisResponse = response[0]
-            console.log(thisResponse)
-
             let coverID = thisResponse.image_id
             let coverUrl1 = "https://images.igdb.com/igdb/image/upload/t_cover_big/"
             let coverUrl2= ".png"

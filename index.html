@@ -79,36 +79,38 @@ title: Triple Click DB
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games..">
     </div>
 
-        <table class="sortable paginated gameTable" id="myTable">
-            <thead>
-            <tr class="header">
-            <th>Game</th>
-            <th>Most Recently Mentioned in</th>
-            <th id="gameTableDate">Most Recently Mentioned on</th>
-            <th>Total mentions</th>
-            </tr>
-            </thead>
-            <tbody>
-                {% for game in site.games %}
-                    <tr>
-                        <td>
-                            <a href="{{ game.url | relative_url}}">{{ game.title }}</a>
-                        </td>
-                            {% assign id = game.id | remove: "/games/"%}
-                            {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
-                            {% assign epID = i[0].ep%}
-                            {% for episode in site.episodes %}
-                                {% assign id =  episode.id | remove: "/episodes/" %}
-                                {% if id == epID %}
-                                <td><a href="{{ episode.url | relative_url}}">{{ episode.title }}</a></td>
-                                <td><a href="{{ episode.url | relative_url}}">{{ episode.date | date: "%Y-%m-%d"}}</a></td>
-                                {% endif %}
-                            {% endfor %}
-                        <td>{{i.size}}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <div class="games-table-container">
+            <table class="sortable gameTable" id="myTable">
+                <thead>
+                <tr class="header">
+                <th>Game</th>
+                <th>Most Recently Mentioned in</th>
+                <th id="gameTableDate">Most Recently Mentioned on</th>
+                <th>Total mentions</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for game in site.games %}
+                        <tr>
+                            <td>
+                                <a href="{{ game.url | relative_url}}">{{ game.title }}</a>
+                            </td>
+                                {% assign id = game.id | remove: "/games/"%}
+                                {% assign i = site.data.game_mentions | where:"game", id | sort_natural: "ep" | reverse %}
+                                {% assign epID = i[0].ep%}
+                                {% for episode in site.episodes %}
+                                    {% assign id =  episode.id | remove: "/episodes/" %}
+                                    {% if id == epID %}
+                                    <td><a href="{{ episode.url | relative_url}}">{{ episode.title }}</a></td>
+                                    <td><a href="{{ episode.url | relative_url}}">{{ episode.date | date: "%Y-%m-%d"}}</a></td>
+                                    {% endif %}
+                                {% endfor %}
+                            <td>{{i.size}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
 </div>
 
 <script src="/assets/recentGames.js"></script>

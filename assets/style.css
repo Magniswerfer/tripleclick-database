@@ -102,10 +102,15 @@ h1, h2, h3, h4, th {
 
 .recent-game-mention-link{
   width: 19%;
+  
 }
 
 .recent-game-mention{
   width: 100%;
+}
+
+.recent-game-mention:hover{
+  outline: 1px solid var(--highlight-color) !important;
 }
 
 
@@ -213,11 +218,12 @@ tbody tr:nth-child(even) {
 
 .game-title{
   margin-bottom: 0;
+  font-size: 30pt;
 }
 
 .sub-title{
   height: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: small;
   color: white;
 }
@@ -225,6 +231,12 @@ tbody tr:nth-child(even) {
 .cover-art{
   width: 20%;
   height: 20%;
+}
+
+.games-table-container{
+  max-height: 1200px;
+  min-height: 700px;
+  overflow-y: auto;
 }
 
 
@@ -252,6 +264,18 @@ tbody tr:nth-child(even) {
 
   .gameTable tbody tr td:nth-child(2), .gameTable thead tr th:nth-child(2){
     display: none;
+  }
+
+  .games-table-container{
+    min-height: 400px;
+  }
+
+  .cover-art{
+    display: none;
+  }
+
+  .summary{
+    margin-left: 0;
   }
 
 }
