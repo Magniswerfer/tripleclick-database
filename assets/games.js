@@ -1,7 +1,6 @@
-const critScore = document.getElementById('crit-score')
-const numCrits = document.getElementById('num-crits')
 const gameSummary = document.getElementById('summary-text')
 const subTitle = document.querySelector(".sub-title")
+const igdbLink = document.querySelector(".link-to-igdb");
 
 const coverArt = document.querySelector(".cover-art");
 
@@ -17,10 +16,9 @@ coverUrl = coverFunc.concat(igdbID);
         )
         
         thisResponse = response[0]
-        numCrits.innerText = thisResponse.aggregated_rating_count
-        critScore.innerText = Math.round(thisResponse.aggregated_rating)
         gameSummary.innerText = thisResponse.summary
         subTitle.innerText = "(" + new Date(thisResponse.first_release_date*1000).getFullYear() + ")"
+        igdbLink.href = thisResponse.url
       }
 
       async function loadImg() {

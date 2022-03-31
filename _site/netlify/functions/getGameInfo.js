@@ -4,7 +4,7 @@ const sprintf = require('sprintf-js').sprintf;
 exports.handler = async function (event) {
 
     let igdbid = event.queryStringParameters.igdbid;
-    let someString = sprintf('fields name, aggregated_rating, aggregated_rating_count, summary, first_release_date, involved_companies; where id = %i;', igdbid);
+    let someString = sprintf('fields name, summary, first_release_date, url; where id = %i;', igdbid);
 
     const api = 'https://api.igdb.com/v4/games'
 

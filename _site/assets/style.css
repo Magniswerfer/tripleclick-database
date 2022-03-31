@@ -239,6 +239,10 @@ tbody tr:nth-child(even) {
   overflow-y: auto;
 }
 
+#summary-text{
+  margin-top: 0;
+}
+
 
 @media screen and (max-width: 600px) {
   body{

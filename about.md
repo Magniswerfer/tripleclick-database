@@ -16,7 +16,9 @@ Next is, that I will only be differentiating between games being discussed as pa
 
 Finally, please use the episode titles and notes to get an idea of the context of the game's discussion. Sometimes it will be briefly discussed as part of a more abstract discussion (such as the use of game guides), and some times it will be used for comparison in an episode largely about something else (e.g., Disco Elysium in the Fallout episode).
 
+## Development
+This site is not developed in a good way at all. It's a static site, built with Jekyll using serverless functions to get game data. It's super slow, and I have to maintain a database of game mentions in yaml files, which is not optimal... But, I've learned a lot about web development making the site, and I hope to move it to a proper, dynamic site at some point. For now though, go nuts.
 
-<p>I maintain the page <a href="https://github.com/Magniswerfer/tripleclickdb">here</a>.</p>
+I maintain the page <a href="https://github.com/Magniswerfer/tripleclickdb">here</a>.
 
 Game information and art provided by [The Internet Game Database](https://igdb.com)
